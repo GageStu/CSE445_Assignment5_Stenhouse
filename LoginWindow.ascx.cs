@@ -11,7 +11,7 @@ namespace CSE445_Assignment5_Stenhouse
             string user = txtUsername.Text.Trim();
             string pass = txtPassword.Text.Trim();
 
-            // ----- TEST ACCOUNTS (for Assignment 5) -----
+            // Hard coded accounts for loggin/testing (will be moved to XML for assignment 6 requirements
             if (user == "TA" && pass == "Cse445!")
             {
                 Session["Username"] = "TA";

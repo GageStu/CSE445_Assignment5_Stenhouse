@@ -9,6 +9,7 @@ namespace CSE445_Assignment5_Stenhouse
         {
             if (Session["Role"]?.ToString() != "Staff")
             {
+                // Build ReturnUrl so login sends them back here
                 string returnUrl = "~/Staff.aspx";
                 Response.Redirect("~/Login.aspx?ReturnUrl=" + Server.UrlEncode(returnUrl));
             }

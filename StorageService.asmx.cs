@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Sourced solution to TLS errors/aborts from stack overflow here:
+// https://stackoverflow.com/questions/71768631/forcing-net-application-to-use-tls-1-2-or-later
+
+using System;
 using System.IO;
 using System.Net;
 using System.Web;
@@ -46,7 +49,7 @@ namespace CSE445_Assignment5_Stenhouse
                     counter++;
                 }
 
-                // Force TLS 1.2 for HTTPS
+                // Force TLS 1.2 for HTTPS (Was getting repeated errors for Sec protocol without 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 // Download the file from the URL
